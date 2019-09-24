@@ -20,3 +20,11 @@ jobs:
       run: php artisan key:generate
     - name: Run tests
       run: php vendor/bin/phpunit
+    - name: Notify result to slack
+      uses: homoluctus/slatify@master
+      if: always()
+      with:
+        type: ${{ job.status }}
+        job_name: '*UNIT TEST*'
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
