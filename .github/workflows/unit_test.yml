@@ -12,5 +12,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run phpunit
+    - name: Install Composer dependencies
+      run: composer install --prefer-dist
+    - name: Run tests
       run: php vendor/bin/phpunit
