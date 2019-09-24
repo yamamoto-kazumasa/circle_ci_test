@@ -27,6 +27,6 @@ jobs:
         type: ${{ job.status }}
         job_name: '*UNIT TEST*'
         channel: '#post-bk-develop'
-        icon_emoji: https://meigen.keiziban-jp.com/wp-content/uploads/2016/04/kote2.jpg
+        icon_emoji: ':tamori:'
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
