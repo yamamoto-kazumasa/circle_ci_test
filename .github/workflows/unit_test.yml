@@ -28,5 +28,6 @@ jobs:
         job_name: '*UNIT TEST*'
         channel: '#post-bk-develop'
         icon_emoji: ':tamori:'
+        username: 'Github Actions'
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
